@@ -106,7 +106,7 @@ function saveUserCredentialsInLocalStorage() {
  * - generate the user profile part of the page
  */
 
-async function updateUIOnUserLogin() {
+function updateUIOnUserLogin() {
   console.debug("updateUIOnUserLogin");
 
   hidePageComponents();

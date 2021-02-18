@@ -82,7 +82,9 @@ async function deleteStory(e) {
   const $closestLi = $(e.target).closest("li");
   const storyId = $closestLi.attr("id");
   await storyList.removeStory(currentUser, storyId);
-  await putUserStoriesOnPage();
+  $closestLi.remove();
+  
+  putUserStoriesOnPage();
 }
 
 $ownStories.on("click", ".trash-can", deleteStory);
